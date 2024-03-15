@@ -13,4 +13,4 @@ Simple Coffee App, I use MVVM Architucre:
 - UI: Jetpack Compose
 
 
-Download the apk file [here](coffee-app-release-unsigned.apk?raw=true)
+Download the apk file [here](coffeeapp-release.apk?raw=true)
