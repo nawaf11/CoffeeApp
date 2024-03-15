@@ -20,7 +20,7 @@ enum class NetworkResultStatus {
  */
 enum class NetworkErrorType {
     HttpError, //
-    ConnectionError, // for example: np
+    ConnectionError, // for example: no internet connection.
     UnknownError
 }
 
