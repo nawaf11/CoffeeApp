@@ -2,8 +2,9 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-parcelize'
 }
-apply plugin: 'com.google.dagger.hilt.android'
 
 android {
     namespace 'com.example.coffeeapp'
@@ -58,16 +59,28 @@ dependencies {
     implementation 'androidx.compose.ui:ui'
     implementation 'androidx.compose.ui:ui-graphics'
     implementation 'androidx.compose.ui:ui-tooling-preview'
-    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material3:material3:1.2.1'
     implementation 'com.google.code.gson:gson:2.10'
 
     // ---- Dagger Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:${rootProject.dagger_hilt_version}")
+    kapt("com.google.dagger:hilt-android-compiler:${rootProject.dagger_hilt_version}")
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+
+    // ---- Navigation
+    implementation "androidx.navigation:navigation-compose:${rootProject.navigation_compose_version}"
 
     // ---- Networking (Retrofit)
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.retrofit_version}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.retrofit_version}"
+
+    // ---- Coil (for Images)
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
+    // ---- Room database
+    implementation "androidx.room:room-runtime:${rootProject.room_version}"
+    implementation "androidx.room:room-ktx:${rootProject.room_version}"
+    kapt("androidx.room:room-compiler:${rootProject.room_version}")
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CoffeeApp</string>
+    <string name="empty_coffee_list">List is empty</string>
+    <string name="coffee_list">Coffee List</string>
+    <string name="refresh">Refresh</string>
+    <string name="ingredient">Ingredient</string>
 </resources>
