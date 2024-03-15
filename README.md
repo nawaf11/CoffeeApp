@@ -1,7 +1,7 @@
 # Coffee App
 
 ![Screenshot](screenshots/coffee_app_image_1.png)
-![Screenshot](screenshots/coffee_app_image_1.png)
+![Screenshot](screenshots/coffee_app_image_2.png)
 
 Simple Coffee App, I use MVVM Architucre:
 - Data Layer:
